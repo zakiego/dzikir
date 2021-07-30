@@ -7,6 +7,7 @@ module.exports = {
 			colors: {
 				"nord-900": "#2E3440",
 				"nord-200": "#6CB3C3",
+				tosca: "#76B0C7",
 			},
 			textColor: {
 				"hitam-33": "#33333",
