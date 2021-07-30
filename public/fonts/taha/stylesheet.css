@@ -1,0 +1,10 @@
+@font-face {
+	font-family: "KFGQPC Uthman Taha Naskh";
+	src: local("KFGQPC Uthman Taha Naskh"),
+		local("KFGQPC Uthman Taha Naskh"),
+		url("KFGQPC Uthman Taha Naskh Regular.woff2") format("woff2"),
+		url("KFGQPC Uthman Taha Naskh Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}

@@ -1,3 +1,5 @@
+import Navbar from "../components/navbar";
+
 export default function DzikirDraft() {
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#E8F0FF] to-[#E5F5FF]">
@@ -80,36 +82,20 @@ export default function DzikirDraft() {
 						</defs>
 					</svg>
 				</div>
-				<main className="pt-20 px-8">
-					<nav className="flex flex-row justify-between">
-						<h1 className="text-opacity-90">Dzikir Pagi</h1>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke="currentColor"
-							className="fill-current text-hitam-33 h-7 w-7"
-						>
-							<path
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth={3}
-								d="M4 6h16M4 12h16m-7 6h7"
-							/>
-						</svg>
-					</nav>
+				<main className="relative pt-12 px-8">
+					<Navbar />
 					<div name="card section" className="pt-14">
 						<div
 							name="card"
-							className="bg-biru-tipis py-12 px-8 rounded-[30px] shadow-tipis"
+							className="bg-biru-tipis py-12 px-9 rounded-[30px] shadow-tipis"
 						>
-							<div name="arab" dir="rtl" className="font-arab text-3xl">
+							<div name="arab" dir="rtl" className="font-taha text-3xl">
 								اَللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ
 								نَحْيَا، وَبِكَ نَمُوْتُ وَإِلَيْكَ
 							</div>
 							<div
 								name="arti"
-								className="font-semibold text-[#333333] text-opacity-80"
+								className="mt-6 leading-5 font-semibold text-[#333333] text-opacity-90 text-xs tracking-wide"
 							>
 								Ya Allah, Engkau adalah Rabbku, tidak ada ilah yang berhak
 								disembah kecuali Engkau, Engkaulah yang menciptakanku. Aku

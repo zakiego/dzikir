@@ -1,4 +1,6 @@
-@import url("../public/fonts/stylesheet.css");
+@import url("../public/fonts/hafs/stylesheet.css");
+@import url("../public/fonts/taha/stylesheet.css");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu");
 
 @tailwind base;
 @tailwind components;
