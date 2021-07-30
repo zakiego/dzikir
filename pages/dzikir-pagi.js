@@ -14,7 +14,7 @@ export async function getServerSideProps() {
 }
 
 export default function Home(props) {
-	const jenisDzikir = "dzikir sore";
+	const jenisDzikir = "dzikir pagi";
 
 	const {
 		data: {
