@@ -1,8 +1,8 @@
-export default function Home() {
+export default function DzikirDraft() {
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#E8F0FF] to-[#E5F5FF]">
-			<div className="max-w-4xl flex pt-20 mx-auto">
-				<div className="relative px-3 ">
+			<div className="relative  min-h-screen max-w-3xl mx-auto">
+				<div>
 					<svg
 						width="414"
 						height="401"
@@ -79,57 +79,51 @@ export default function Home() {
 							</filter>
 						</defs>
 					</svg>
-
-					<main className="relative">
-						<div name="navbar" className="font-bold text-4xl">
-							<div className="flex flex-row justify-between items-center">
-								<h1 className="text-opacity-90">Dzikir Pagi</h1>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke="currentColor"
-									className="fill-current text-hitam-33 h-7 w-7"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth={3}
-										d="M4 6h16M4 12h16m-7 6h7"
-									/>
-								</svg>
-							</div>
-						</div>
-
-						<div className="card place pt-14">
-							<div
-								name="card"
-								className="bg-biru-tipis py-12 px-8 rounded-[30px] shadow-tipis"
-							>
-								<div name="arab" dir="rtl" className="font-arab text-3xl">
-									اَللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ
-									نَحْيَا، وَبِكَ نَمُوْتُ وَإِلَيْكَ
-								</div>
-								<div
-									name="arti"
-									className="font-semibold text-[#333333] text-opacity-80"
-								>
-									Ya Allah, Engkau adalah Rabbku, tidak ada ilah yang berhak
-									disembah kecuali Engkau, Engkaulah yang menciptakanku. Aku
-									adalah hamba-Mu. Aku akan setia pada perjanjianku pada-Mu
-									(yaitu aku akan mentauhidkan-Mu) semampuku dan aku yakin akan
-									janji-Mu (berupa surga untukku). Aku berlindung kepada-Mu dari
-									kejelekan yang kuperbuat. Aku mengakui nikmat-Mu kepadaku dan
-									aku mengakui dosaku. Oleh karena itu, ampunilah aku.
-									Sesungguhnya tiada yang mengampuni dosa kecuali Engkau.
-								</div>
-							</div>
-						</div>
-					</main>
 				</div>
+				<main className="pt-20 px-8">
+					<nav className="flex flex-row justify-between">
+						<h1 className="text-opacity-90">Dzikir Pagi</h1>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							className="fill-current text-hitam-33 h-7 w-7"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={3}
+								d="M4 6h16M4 12h16m-7 6h7"
+							/>
+						</svg>
+					</nav>
+					<div name="card section" className="pt-14">
+						<div
+							name="card"
+							className="bg-biru-tipis py-12 px-8 rounded-[30px] shadow-tipis"
+						>
+							<div name="arab" dir="rtl" className="font-arab text-3xl">
+								اَللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ
+								نَحْيَا، وَبِكَ نَمُوْتُ وَإِلَيْكَ
+							</div>
+							<div
+								name="arti"
+								className="font-semibold text-[#333333] text-opacity-80"
+							>
+								Ya Allah, Engkau adalah Rabbku, tidak ada ilah yang berhak
+								disembah kecuali Engkau, Engkaulah yang menciptakanku. Aku
+								adalah hamba-Mu. Aku akan setia pada perjanjianku pada-Mu (yaitu
+								aku akan mentauhidkan-Mu) semampuku dan aku yakin akan janji-Mu
+								(berupa surga untukku). Aku berlindung kepada-Mu dari kejelekan
+								yang kuperbuat. Aku mengakui nikmat-Mu kepadaku dan aku mengakui
+								dosaku. Oleh karena itu, ampunilah aku. Sesungguhnya tiada yang
+								mengampuni dosa kecuali Engkau.
+							</div>
+						</div>
+					</div>
+				</main>
 			</div>
 		</div>
 	);
 }
-
-// bg-[#F9F4F4]
