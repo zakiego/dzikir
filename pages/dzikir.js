@@ -1,6 +1,8 @@
 import Navbar from "../components/navbar";
 
 export default function DzikirDraft() {
+	const titlePage = "Dzikir Pagi";
+
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#E8F0FF] to-[#E5F5FF]">
 			<div className="relative  min-h-screen max-w-6xl mx-auto">
@@ -83,7 +85,7 @@ export default function DzikirDraft() {
 					</svg>
 				</div>
 				<main className="relative pt-12 px-8">
-					<Navbar />
+					<Navbar title={titlePage} />
 					<div name="card section" className="pt-14">
 						<div
 							name="card"
@@ -146,7 +148,9 @@ export default function DzikirDraft() {
 										fill="#76B0C7"
 									/>
 								</svg>
-								<div className="text-nord-200 text-xs md:text-base">Faidah</div>
+								<div className="text-nord-200 text-xs md:text-base font-semibold">
+									Faidah
+								</div>
 							</div>
 						</div>
 					</div>
