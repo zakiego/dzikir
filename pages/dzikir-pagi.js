@@ -1,7 +1,7 @@
 import Navbar from "../components/navbar";
 
 export async function getStaticProps() {
-	const res = await fetch(`http://${process.env.URL}/api/public/v1/getDzikir`);
+	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
 
 	const data = await res.json();
 
