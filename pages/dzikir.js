@@ -127,7 +127,7 @@ export default function DzikirDraft() {
 									/>
 								</svg>
 							</div>
-							<div className="mt-4 bg-tosca text-white w-24 h-7 flex justify-center items-center text-center rounded-md">
+							<div className="mt-4 w-16 md:w-24 h-5 md:h-7 text-xs md:text-base bg-tosca text-white flex justify-center items-center text-center rounded-md">
 								Dibaca 1x
 							</div>
 						</div>
