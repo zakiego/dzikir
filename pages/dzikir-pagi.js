@@ -151,7 +151,7 @@ export default function Home(props) {
 				<Blur warna={warnaBlur} />
 
 				<div className=" min-h-screen max-w-6xl mx-auto">
-					<main className="relative pt-12 px-8">
+					<main className="relative pt-12 pb-20  px-8">
 						<Navbar title={titlePage} />
 						<div name="card section" className="pt-14 space-y-8">
 							{renderDzikir}
