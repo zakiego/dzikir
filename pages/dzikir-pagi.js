@@ -93,7 +93,11 @@ export default function Home(props) {
 							{dzikir.dibaca}
 						</div>
 					</div>
-					<form name={dzikir.id} onSubmit={faidahHandler}>
+					<form
+						name={dzikir.id}
+						onSubmit={faidahHandler}
+						className="focus:outline-none"
+					>
 						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2">
 							<svg
 								width="21"
