@@ -1,7 +1,7 @@
 export default function Navbar(props) {
 	const { title } = props;
 	return (
-		<nav className="flex flex-row justify-between sticky">
+		<nav className="flex flex-row justify-between">
 			<h1 className="text-opacity-90 text-3xl font-bold tracking-wide">
 				{title}
 			</h1>
