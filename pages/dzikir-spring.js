@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
 import { useState } from "react";
@@ -227,8 +228,8 @@ export default function Home(props) {
 						{!isOpen && (
 							<motion.div
 								layout
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
+								initial="hidden"
+								animate="visible"
 								exit={{ opacity: 0 }}
 								name="faidah"
 							>

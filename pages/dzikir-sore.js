@@ -13,7 +13,8 @@ export async function getStaticProps() {
 	}
 
 	return {
-		props: { data }, // will be passed to the page component as props
+		props: { data },
+		revalidate: 60, // will be passed to the page component as props
 	};
 }
 
