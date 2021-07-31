@@ -1,7 +1,5 @@
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
-import { useState } from "react";
-
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
 
@@ -22,6 +20,7 @@ export default function Home(props) {
 	const titlePage = "Dzikir Pagi";
 	const jenisDzikir = "dzikir pagi";
 	const warnaBlur = "#F9F4F4";
+	// const warnaBlur = "#000000";
 
 	const {
 		data: {
@@ -40,11 +39,11 @@ export default function Home(props) {
 		let scx = document.getElementsByName("secondary-" + att);
 
 		if (prx[0].classList.value === "") {
-			prx[0].classList.value = "hidden";
+			prx[0].classList.value = "transition-all hidden";
 			scx[0].classList.value = "";
 		} else {
 			prx[0].classList.value = "";
-			scx[0].classList.value = "hidden";
+			scx[0].classList.value = "transition-all hidden";
 		}
 
 		// console.log(prx[0].classList.value);
@@ -93,12 +92,8 @@ export default function Home(props) {
 							{dzikir.dibaca}
 						</div>
 					</div>
-					<form
-						name={dzikir.id}
-						onSubmit={faidahHandler}
-						className="focus:outline-none"
-					>
-						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2">
+					<form name={dzikir.id} onSubmit={faidahHandler}>
+						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2 outline-none hover:scale-110 hover:transition-all duration-500">
 							<svg
 								width="21"
 								height="21"
@@ -152,15 +147,17 @@ export default function Home(props) {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#E8F0FF] to-[#E5F5FF]">
-			<div className="relative  min-h-screen max-w-6xl mx-auto">
+			<div className="relative ">
 				<Blur warna={warnaBlur} />
 
-				<main className="relative pt-12 px-8">
-					<Navbar title={titlePage} />
-					<div name="card section" className="pt-14 space-y-8">
-						{renderDzikir}
-					</div>
-				</main>
+				<div className=" min-h-screen max-w-6xl mx-auto">
+					<main className="relative pt-12 px-8">
+						<Navbar title={titlePage} />
+						<div name="card section" className="pt-14 space-y-8">
+							{renderDzikir}
+						</div>
+					</main>
+				</div>
 			</div>
 		</div>
 	);

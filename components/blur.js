@@ -2,14 +2,14 @@ export default function Blur(props) {
 	const { warna } = props;
 
 	return (
-		<div>
+		<div className="fixed">
 			<svg
 				width="379"
 				height="351"
 				viewBox="0 0 379 351"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-				className="absolute bottom-0 right-0"
+				className=" bottom-0 right-0 fixed"
 			>
 				<g filter="url(#filter0_f)">
 					<path
