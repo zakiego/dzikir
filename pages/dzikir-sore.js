@@ -78,6 +78,9 @@ export default function DzikirSore(props) {
 					</form>
 
 					<div name={"primary-" + dzikir.id} className="">
+						<div className="mt-4 max-w-max px-3 py-1 text-xs md:text-base bg-senja text-white flex justify-center items-center text-center rounded-md">
+							{dzikir.dibaca}
+						</div>
 						<div
 							name="arab"
 							dir="rtl"
@@ -109,10 +112,6 @@ export default function DzikirSore(props) {
 								/>
 							</svg>
 						</div>
-						{/* w-16 md:w-24 h-5 md:h-7 */}
-						<div className="mt-4 max-w-max px-3 py-1 text-xs md:text-base bg-senja text-white flex justify-center items-center text-center rounded-md">
-							{dzikir.dibaca}
-						</div>
 					</div>
 
 					<div name={"secondary-" + dzikir.id} className="hidden">
@@ -130,7 +129,7 @@ export default function DzikirSore(props) {
 									fillRule="evenodd"
 									clipRule="evenodd"
 									d="M7 14C8.85652 14 10.637 13.2625 11.9497 11.9497C13.2625 10.637 14 8.85652 14 7C14 5.14348 13.2625 3.36301 11.9497 2.05025C10.637 0.737498 8.85652 0 7 0C5.14348 0 3.36301 0.737498 2.05025 2.05025C0.737498 3.36301 0 5.14348 0 7C0 8.85652 0.737498 10.637 2.05025 11.9497C3.36301 13.2625 5.14348 14 7 14ZM10.2436 5.86862C10.403 5.7036 10.4912 5.48257 10.4892 5.25315C10.4872 5.02373 10.3952 4.80427 10.233 4.64203C10.0707 4.4798 9.85127 4.38778 9.62185 4.38579C9.39243 4.38379 9.1714 4.47199 9.00637 4.63138L6.125 7.51275L4.99362 6.38138C4.8286 6.22199 4.60757 6.13379 4.37815 6.13579C4.14873 6.13778 3.92927 6.2298 3.76703 6.39203C3.6048 6.55427 3.51278 6.77373 3.51079 7.00315C3.50879 7.23257 3.59699 7.4536 3.75638 7.61862L5.50638 9.36862C5.67046 9.53266 5.89298 9.62481 6.125 9.62481C6.35702 9.62481 6.57954 9.53266 6.74363 9.36862L10.2436 5.86862Z"
-									fill="#21ABC2"
+									fill="#FDAB5E"
 								/>
 							</svg>
 						</div>

@@ -79,6 +79,9 @@ export default function DzikirPagi(props) {
 					</form>
 
 					<div name={"primary-" + dzikir.id} className="">
+						<div className="mt-4 max-w-max px-3 py-1 text-xs md:text-base bg-tosca text-white flex justify-center items-center text-center rounded-md">
+							{dzikir.dibaca}
+						</div>
 						<div
 							name="arab"
 							dir="rtl"
@@ -109,10 +112,6 @@ export default function DzikirPagi(props) {
 									fill="#21ABC2"
 								/>
 							</svg>
-						</div>
-						{/* w-16 md:w-24 h-5 md:h-7 */}
-						<div className="mt-4 max-w-max px-3 py-1 text-xs md:text-base bg-tosca text-white flex justify-center items-center text-center rounded-md">
-							{dzikir.dibaca}
 						</div>
 					</div>
 
