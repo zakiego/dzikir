@@ -9,6 +9,8 @@ module.exports = {
 				"nord-200": "#6CB3C3",
 				tosca: "#76B0C7",
 				senja: "#FDAB5E",
+				"card-pagi": "#F5FBFF",
+				"card-sore": "#FFFAF5",
 			},
 			textColor: {
 				"hitam-33": "#33333",

@@ -1,5 +1,6 @@
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
+
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
 
@@ -17,15 +18,14 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Home(props) {
+export default function DzikirPagi(props) {
 	const titlePage = "Dzikir Pagi";
-	const jenisDzikir = "dzikir pagi";
+	const jenisDzikir = titlePage.toLocaleLowerCase();
 	const warnaBlur = "#F9F4F4";
-	// const warnaBlur = "#000000";
 
 	const {
 		data: {
-			data: { dzikir, sumber },
+			data: { dzikir },
 		},
 	} = props;
 
@@ -46,8 +46,6 @@ export default function Home(props) {
 			prx[0].classList.value = "";
 			scx[0].classList.value = "transition-all hidden";
 		}
-
-		// console.log(prx[0].classList.value);
 	};
 
 	const renderDzikir = filteredDzikir.map((dzikir) => {
@@ -55,7 +53,7 @@ export default function Home(props) {
 			<div key={dzikir.id}>
 				<div
 					name="card"
-					className="bg-biru-tipis py-12 px-9 md:px-16 rounded-[30px] shadow-tipis"
+					className="bg-card-pagi pt-8 pb-12  px-9 md:px-16 rounded-[30px] shadow-tipis"
 				>
 					<form name={dzikir.id} onSubmit={faidahHandler}>
 						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2 outline-none hover:scale-110 hover:transition-all duration-500">
@@ -84,7 +82,7 @@ export default function Home(props) {
 						<div
 							name="arab"
 							dir="rtl"
-							className="font-taha text-3xl md:text-5xl leading-relaxed md:leading-loose"
+							className="pt-5 font-taha text-3xl md:text-5xl leading-relaxed md:leading-loose"
 						>
 							{dzikir.arabic}
 						</div>
@@ -112,32 +110,12 @@ export default function Home(props) {
 								/>
 							</svg>
 						</div>
-						<div className="mt-4 w-16 md:w-24 h-5 md:h-7 text-xs md:text-base bg-tosca text-white flex justify-center items-center text-center rounded-md">
+						{/* w-16 md:w-24 h-5 md:h-7 */}
+						<div className="mt-4 max-w-max px-3 py-1 text-xs md:text-base bg-tosca text-white flex justify-center items-center text-center rounded-md">
 							{dzikir.dibaca}
 						</div>
 					</div>
-					{/* <form name={dzikir.id} onSubmit={faidahHandler}>
-						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2 outline-none hover:scale-110 hover:transition-all duration-500">
-							<svg
-								width="21"
-								height="21"
-								viewBox="0 0 21 21"
-								fill="none"
-								xmlns="http://www.w3.org/2000/svg"
-								className="scale-75 md:scale-90"
-							>
-								<path
-									fillRule="evenodd"
-									clipRule="evenodd"
-									d="M21 10.5C21 13.2848 19.8938 15.9555 17.9246 17.9246C15.9555 19.8938 13.2848 21 10.5 21C7.71523 21 5.04451 19.8938 3.07538 17.9246C1.10625 15.9555 0 13.2848 0 10.5C0 7.71523 1.10625 5.04451 3.07538 3.07538C5.04451 1.10625 7.71523 0 10.5 0C13.2848 0 15.9555 1.10625 17.9246 3.07538C19.8938 5.04451 21 7.71523 21 10.5ZM11.8125 5.25C11.8125 5.5981 11.6742 5.93194 11.4281 6.17808C11.1819 6.42422 10.8481 6.5625 10.5 6.5625C10.1519 6.5625 9.81806 6.42422 9.57192 6.17808C9.32578 5.93194 9.1875 5.5981 9.1875 5.25C9.1875 4.9019 9.32578 4.56806 9.57192 4.32192C9.81806 4.07578 10.1519 3.9375 10.5 3.9375C10.8481 3.9375 11.1819 4.07578 11.4281 4.32192C11.6742 4.56806 11.8125 4.9019 11.8125 5.25ZM9.1875 9.1875C8.8394 9.1875 8.50556 9.32578 8.25942 9.57192C8.01328 9.81806 7.875 10.1519 7.875 10.5C7.875 10.8481 8.01328 11.1819 8.25942 11.4281C8.50556 11.6742 8.8394 11.8125 9.1875 11.8125V15.75C9.1875 16.0981 9.32578 16.4319 9.57192 16.6781C9.81806 16.9242 10.1519 17.0625 10.5 17.0625H11.8125C12.1606 17.0625 12.4944 16.9242 12.7406 16.6781C12.9867 16.4319 13.125 16.0981 13.125 15.75C13.125 15.4019 12.9867 15.0681 12.7406 14.8219C12.4944 14.5758 12.1606 14.4375 11.8125 14.4375V10.5C11.8125 10.1519 11.6742 9.81806 11.4281 9.57192C11.1819 9.32578 10.8481 9.1875 10.5 9.1875H9.1875Z"
-									fill="#76B0C7"
-								/>
-							</svg>
-							<div className="text-nord-200 text-xs md:text-base font-semibold">
-								Faidah
-							</div>
-						</button>
-					</form> */}
+
 					<div name={"secondary-" + dzikir.id} className="hidden">
 						<div className="flex flex-inline items-center pt-4 space-x-2 text-xs md:text-base">
 							<p className="opacity-70">{dzikir.sumber}</p>

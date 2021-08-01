@@ -17,7 +17,7 @@ export async function getStaticProps() {
 	};
 }
 
-export default function DzikirSore(props) {
+export default function Home(props) {
 	const titlePage = "Dzikir Sore";
 	const jenisDzikir = titlePage.toLocaleLowerCase();
 	const warnaBlur = "#E4C1CE";

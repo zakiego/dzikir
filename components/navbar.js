@@ -2,7 +2,7 @@ export default function Navbar(props) {
 	const { title } = props;
 	return (
 		<nav className="flex flex-row justify-between">
-			<h1 className="text-opacity-90 text-3xl font-bold tracking-wide">
+			<h1 className="opacity-70 text-3xl md:text-5xl font-bold tracking-wide">
 				{title}
 			</h1>
 			<svg
