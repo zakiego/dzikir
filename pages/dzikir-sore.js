@@ -1,5 +1,7 @@
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
+import Header from "../components/header";
+
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
 
@@ -90,7 +92,7 @@ export default function DzikirSore(props) {
 						</div>
 						<div
 							name="arti"
-							className="text-xs md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
+							className="text-sm md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
 						>
 							{dzikir.arti}
 						</div>
@@ -135,7 +137,7 @@ export default function DzikirSore(props) {
 						</div>
 						<div
 							name="faidah"
-							className="text-xs md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
+							className="text-sm md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
 						>
 							{dzikir.faidah}
 						</div>
@@ -147,11 +149,12 @@ export default function DzikirSore(props) {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#FED7B2] to-[#FFBA7A]">
+			<Header title={titlePage} />
 			<div className="relative ">
 				<Blur warna={warnaBlur} />
 
 				<div className=" min-h-screen max-w-6xl mx-auto">
-					<main className="relative pt-12 pb-20  px-8">
+					<main className="relative pt-12 pb-20  px-5">
 						<Navbar title={titlePage} />
 						<div name="card section" className="pt-14 space-y-8">
 							{renderDzikir}

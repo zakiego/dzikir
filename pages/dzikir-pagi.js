@@ -1,5 +1,6 @@
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
+import Header from "../components/header";
 
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
@@ -53,7 +54,7 @@ export default function DzikirPagi(props) {
 			<div key={dzikir.id}>
 				<div
 					name="card"
-					className="bg-card-pagi pt-8 pb-12  px-9 md:px-16 rounded-[30px] shadow-tipis"
+					className="bg-card-pagi pt-8 pb-12  px-8 md:px-16 rounded-[30px] shadow-tipis"
 				>
 					<form name={dzikir.id} onSubmit={faidahHandler}>
 						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2 outline-none hover:scale-110 hover:transition-all duration-500">
@@ -91,7 +92,7 @@ export default function DzikirPagi(props) {
 						</div>
 						<div
 							name="arti"
-							className="text-xs md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
+							className="text-sm md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
 						>
 							{dzikir.arti}
 						</div>
@@ -136,7 +137,7 @@ export default function DzikirPagi(props) {
 						</div>
 						<div
 							name="faidah"
-							className="text-xs md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
+							className="text-sm md:text-lg mt-6 leading-5 md:leading-relaxed font-normal tracking-wide"
 						>
 							{dzikir.faidah}
 						</div>
@@ -148,11 +149,12 @@ export default function DzikirPagi(props) {
 
 	return (
 		<div className="min-h-screen bg-gradient-to-bl from-[#E8F0FF] to-[#E5F5FF]">
+			<Header title={titlePage} />
 			<div className="relative ">
 				<Blur warna={warnaBlur} />
 
 				<div className=" min-h-screen max-w-6xl mx-auto">
-					<main className="relative pt-12 pb-20  px-8">
+					<main className="relative pt-12 pb-20 px-5">
 						<Navbar title={titlePage} />
 						<div name="card section" className="pt-14 space-y-8">
 							{renderDzikir}
