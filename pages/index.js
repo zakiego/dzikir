@@ -2,18 +2,11 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export function getServerSideProps() {
+function Page() {
 	const newDate = new Date();
 	const getHour = newDate.getHours();
 	const category = getHour < 12 ? "/dzikir-pagi" : "/dzikir-sore";
-
-	return { props: { category } };
-}
-
-function Page(props) {
 	const router = useRouter();
-
-	const { category } = props;
 
 	useEffect(() => router.push(category));
 
