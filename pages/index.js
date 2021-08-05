@@ -17,15 +17,14 @@ function Page(props) {
 
 	useEffect(() => router.push(category));
 
-	let circleCommonClasses = "h-3 w-3 bg-current bg-green-500 rounded-full";
+	// let circleCommonClasses = "h-3 w-3 bg-current bg-green-500 rounded-full";
 
-	return (
-		<div className="flex  min-h-screen justify-center items-center space-x-3">
-			<div className={`${circleCommonClasses}  animate-bounce`} />
-			<div className={`${circleCommonClasses} animate-bounce200`} />
-			<div className={`${circleCommonClasses} animate-bounce400`} />
-		</div>
-	);
+	// <div className="flex  min-h-screen justify-center items-center space-x-3">
+	// 	<div className={`${circleCommonClasses}  animate-bounce`} />
+	// 	<div className={`${circleCommonClasses} animate-bounce200`} />
+	// 	<div className={`${circleCommonClasses} animate-bounce400`} />
+	// </div>
+	return <></>;
 }
 
 export default Page;
