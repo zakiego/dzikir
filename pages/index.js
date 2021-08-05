@@ -2,22 +2,30 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-function Page() {
-	const router = useRouter();
+export function getServerSideProps() {
 	const newDate = new Date();
 	const getHour = newDate.getHours();
+	const category = getHour < 12 ? "/dzikir-pagi" : "/dzikir-sore";
 
-	const handleClick = () => {
-		useEffect(() => {
-			if (getHour < 12) {
-				router.push("/dzikir-pagi");
-			} else {
-				router.push("/dzikir-sore");
-			}
-		}, []);
-	};
+	return { props: { category } };
+}
 
-	return <>{handleClick()}</>;
+function Page(props) {
+	const router = useRouter();
+
+	const { category } = props;
+
+	useEffect(() => router.push(category));
+
+	let circleCommonClasses = "h-3 w-3 bg-current bg-green-500 rounded-full";
+
+	return (
+		<div className="flex  min-h-screen justify-center items-center space-x-3">
+			<div className={`${circleCommonClasses}  animate-bounce`} />
+			<div className={`${circleCommonClasses} animate-bounce200`} />
+			<div className={`${circleCommonClasses} animate-bounce400`} />
+		</div>
+	);
 }
 
 export default Page;
