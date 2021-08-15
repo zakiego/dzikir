@@ -4,7 +4,7 @@ export default function Footer() {
 			<div>
 				Made with &lt;3 by{" "}
 				<a
-					href="http://twitter.com/prasastipagi"
+					href="https://zakigo.my.id"
 					className="px-1 py-0.5 rounded-md font-medium bg-gray-600 text-white hover:bg-gray-500"
 				>
 					Zakiego
