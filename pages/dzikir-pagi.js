@@ -1,6 +1,8 @@
 import Navbar from "../components/navbar";
 import Blur from "../components/blur";
 import Header from "../components/header";
+import faidahHandler from "../components/faidahHandler";
+import Footer from "../components/footer";
 
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
@@ -33,21 +35,6 @@ export default function DzikirPagi(props) {
 	const filteredDzikir = dzikir.filter(function (el) {
 		return el.category.includes(jenisDzikir);
 	});
-
-	const faidahHandler = (e) => {
-		e.preventDefault();
-		const att = e.target.getAttribute("name");
-		let prx = document.getElementsByName("primary-" + att);
-		let scx = document.getElementsByName("secondary-" + att);
-
-		if (prx[0].classList.value === "") {
-			prx[0].classList.value = "transition-all hidden";
-			scx[0].classList.value = "";
-		} else {
-			prx[0].classList.value = "";
-			scx[0].classList.value = "transition-all hidden";
-		}
-	};
 
 	const renderDzikir = filteredDzikir.map((dzikir) => {
 		return (
@@ -86,7 +73,7 @@ export default function DzikirPagi(props) {
 						<div
 							name="arab"
 							dir="rtl"
-							className="pt-5 font-taha text-3xl md:text-5xl leading-relaxed md:leading-loose"
+							className="pt-5 font-hafs text-3xl md:text-5xl leading-relaxed md:leading-loose"
 						>
 							{dzikir.arabic}
 						</div>
@@ -154,11 +141,12 @@ export default function DzikirPagi(props) {
 				<Blur warna={warnaBlur} />
 
 				<div className=" min-h-screen max-w-6xl mx-auto">
-					<main className="relative pt-12 pb-20 px-5">
+					<main className="relative pt-12 pb-10 px-5">
 						<Navbar title={titlePage} />
 						<div name="card section" className="pt-14 space-y-8">
 							{renderDzikir}
 						</div>
+						<Footer />
 					</main>
 				</div>
 			</div>
