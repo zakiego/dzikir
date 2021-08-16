@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import Meta from "../components/meta";
 
 export default function Page() {
 	const newDate = new Date();
@@ -11,5 +12,5 @@ export default function Page() {
 		void router.push(category);
 	}, [category, router]);
 
-	return <div />;
+	return <Meta />;
 }

@@ -13,7 +13,7 @@ export default function Footer() {
 			<div>
 				<a
 					href="https://github.com/zakiego/dzikir"
-					className="text-blue-900 hover:text-blue-600"
+					className="text-blue-900 hover:text-blue-600 hover:border-b-2 pb-1 hover:border-blue-600 transition-all duration-300"
 				>
 					View repository
 				</a>

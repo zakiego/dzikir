@@ -3,6 +3,7 @@ import Blur from "../components/blur";
 import Header from "../components/header";
 import faidahHandler from "../components/faidahHandler";
 import Footer from "../components/footer";
+import compare from "../components/compare";
 
 export async function getStaticProps() {
 	const res = await fetch(`https://api.zakiego.my.id/api/dzikir/v1/getDzikir`);
@@ -36,12 +37,13 @@ export default function DzikirSore(props) {
 		return el.category.includes(jenisDzikir);
 	});
 
+	filteredDzikir.sort(compare);
 	const renderDzikir = filteredDzikir.map((dzikir) => {
 		return (
 			<div key={dzikir.id}>
 				<div
 					name="card"
-					className="bg-card-sore pt-8 pb-12  px-9 md:px-16 rounded-[30px] shadow-tipis"
+					className="bg-card-sore pt-8 pb-12  px-8 md:px-16 rounded-[30px] shadow-tipis"
 				>
 					<form name={dzikir.id} onSubmit={faidahHandler}>
 						<button className="flex flex-row mt-4 items-center space-x-1 md:space-x-2 outline-none hover:scale-110 hover:transition-all duration-500">
