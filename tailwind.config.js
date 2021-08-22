@@ -8,7 +8,7 @@ module.exports = {
 				"nord-900": "#2E3440",
 				"nord-200": "#6CB3C3",
 				tosca: "#71a8bf",
-				senja: "#FDAB5E",
+				senja: "#E39954",
 				"card-pagi": "#F5FBFF",
 				"card-sore": "#FFFAF5",
 			},
@@ -22,12 +22,7 @@ module.exports = {
 			fontFamily: {
 				hafs: ["KFGQPC Uthmanic Script HAFS", "sans-serif"],
 				taha: ["KFGQPC Uthman Taha Naskh", "sans-serif"],
-				// "source-sans-pro": ["Source Sans Pro", "sans-serif"],
-				ubuntu: ["Ubuntu", "sans-serif"],
-			},
-			animation: {
-				bounce200: "bounce 1s infinite 200ms",
-				bounce400: "bounce 1s infinite 400ms",
+				ubuntu: ["ubuntu", "system-ui", "sans-serif"],
 			},
 		},
 	},
