@@ -1,6 +1,6 @@
 export default function Footer() {
 	return (
-		<div className="text-sm text-center mt-10 opacity-70 tracking-wide space-y-1">
+		<div className="text-[12px] text-center mt-10 opacity-70 tracking-wide space-y-1">
 			<div>
 				Made with &lt;3 by{" "}
 				<a
