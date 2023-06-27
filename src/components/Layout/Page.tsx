@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { match } from "ts-pattern";
 import { BackgroundBlur } from "~/src/components/blur";
 import { Footer } from "~/src/components/footer";
 import { Header } from "~/src/components/header";
@@ -8,22 +9,22 @@ interface Props {
   title: string;
   children: React.ReactNode;
   backgroundBlurColor?: string;
-  gradient: {
-    from: string;
-    to: string;
-  };
+  pageType?: "dzikirPagi" | "dzikirSore";
 }
 
 export const PageLayout: FC<Props> = ({
   title,
   children,
   backgroundBlurColor,
-  gradient,
+  pageType,
 }) => {
+  const gradient = match(pageType)
+    .with("dzikirPagi", () => "from-[#E8F0FF] to-[#E5F5FF]")
+    .with("dzikirSore", () => "from-[#F5CEAB] to-[#FFBA7A]")
+    .otherwise(() => "");
+
   return (
-    <div
-      className={`min-h-screen bg-gradient-to-bl from-[${gradient.from}] to-[${gradient.to}]`}
-    >
+    <div className={`min-h-screen bg-gradient-to-bl ${gradient}`}>
       <Header title={title} />
       <div className="relative ">
         {backgroundBlurColor && <BackgroundBlur color={backgroundBlurColor} />}

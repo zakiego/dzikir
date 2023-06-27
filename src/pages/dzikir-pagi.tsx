@@ -21,10 +21,7 @@ export const DzikirPagi: FC<Props> = ({ title, description, dzikir }) => {
     <PageLayout
       title={title}
       backgroundBlurColor="#F9F4F4"
-      gradient={{
-        from: "#E8F0FF",
-        to: "#E5F5FF",
-      }}
+      pageType="dzikirPagi"
     >
       {dzikir.map((item, index) => (
         <DzikirCard key={index} item={item} index={index} />

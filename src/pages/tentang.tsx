@@ -28,13 +28,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export const Tentang: FC<Props> = ({ title, source }) => {
   return (
-    <PageLayout
-      title={title}
-      gradient={{
-        from: "#f5ceab",
-        to: "#FFBA7A",
-      }}
-    >
+    <PageLayout title={title}>
       <div className="px-8 md:px-16">
         <div className="pb-4 font-semibold">
           <p>Sumber: </p>
