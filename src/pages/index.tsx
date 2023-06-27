@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import Meta from "../components/meta";
+import { Meta } from "~/src/components/meta";
 
 export default function Page() {
   const newDate = new Date();
