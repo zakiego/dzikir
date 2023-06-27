@@ -1,11 +1,16 @@
 import Head from "next/head";
+import { FC } from "react";
 import { Favicon } from "~/src/components/favicon";
 import { Meta } from "~/src/components/meta";
 
-export const Header = (props) => {
+interface Props {
+  title: string;
+}
+
+export const Header: FC<Props> = ({ title }) => {
   return (
     <Head>
-      <title>{props.title}</title>
+      <title>{title}</title>
       <Favicon />
       <Meta />
     </Head>
