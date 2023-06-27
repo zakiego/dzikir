@@ -9,8 +9,14 @@ export default function Page() {
   const router = useRouter();
 
   useEffect(() => {
-    void router.push(category);
+    if (router.isReady) {
+      router.push(category);
+    }
   }, [category, router]);
 
-  return <Meta />;
+  return (
+    <>
+      <Meta />
+    </>
+  );
 }
