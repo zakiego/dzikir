@@ -1,13 +1,18 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import * as fs from "fs";
 import { keystaticSchema } from "~/src/utils/keystatic";
 
-const handler = (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
+  const url = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : `http://localhost:3000`;
+
+  const raw = await fetch(`${url}/content/dzikir-pagi.json`);
+
   const data = keystaticSchema.dzikir
     .pick({
       dzikir: true,
     })
-    .parse(JSON.parse(fs.readFileSync("content/dzikir-pagi.json", "utf-8")));
+    .parse(await raw.json());
 
   const addId = data.dzikir.map((item, index) => {
     return {
