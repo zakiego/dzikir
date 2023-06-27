@@ -5,16 +5,9 @@ export const keystaticConfig = config({
     kind: "local",
   },
   singletons: {
-    homepage: singleton({
-      label: "Homepage",
-      path: "src/content/_homepage",
-      schema: {
-        headline: fields.text({ label: "Headline" }),
-      },
-    }),
     about: singleton({
       label: "About",
-      path: "content/about",
+      path: "public/content/about",
       format: "json",
       schema: {
         title: fields.text({ label: "Title" }),
@@ -33,7 +26,7 @@ export const keystaticConfig = config({
     }),
     dzikirPagi: singleton({
       label: "Dzikir Pagi",
-      path: "content/dzikir-pagi",
+      path: "public/content/dzikir-pagi",
       format: "json",
       schema: {
         title: fields.text({ label: "Title" }),
@@ -56,7 +49,7 @@ export const keystaticConfig = config({
     }),
     dzikirSore: singleton({
       label: "Dzikir Sore",
-      path: "content/dzikir-sore",
+      path: "public/content/dzikir-sore",
       format: "json",
       schema: {
         title: fields.text({ label: "Title" }),
