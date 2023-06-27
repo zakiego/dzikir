@@ -31,5 +31,51 @@ export const keystaticConfig = config({
         ),
       },
     }),
+    dzikirPagi: singleton({
+      label: "Dzikir Pagi",
+      path: "content/dzikir-pagi",
+      format: "json",
+      schema: {
+        title: fields.text({ label: "Title" }),
+        description: fields.text({ label: "Description" }),
+        dzikir: fields.array(
+          fields.object({
+            arabic: fields.text({ label: "Arabic", multiline: true }),
+            latin: fields.text({ label: "Latin", multiline: true }),
+            translation: fields.text({ label: "Translation", multiline: true }),
+            source: fields.text({ label: "Source", multiline: true }),
+            read: fields.text({ label: "Read", multiline: true }),
+            benefit: fields.text({ label: "Benefit", multiline: true }),
+          }),
+          {
+            itemLabel: (item) => item.fields.arabic.value,
+            label: "Dzikir",
+          },
+        ),
+      },
+    }),
+    dzikirSore: singleton({
+      label: "Dzikir Sore",
+      path: "content/dzikir-sore",
+      format: "json",
+      schema: {
+        title: fields.text({ label: "Title" }),
+        description: fields.text({ label: "Description" }),
+        dzikir: fields.array(
+          fields.object({
+            arabic: fields.text({ label: "Arabic", multiline: true }),
+            latin: fields.text({ label: "Latin", multiline: true }),
+            translation: fields.text({ label: "Translation", multiline: true }),
+            source: fields.text({ label: "Source", multiline: true }),
+            read: fields.text({ label: "Read", multiline: true }),
+            benefit: fields.text({ label: "Benefit", multiline: true }),
+          }),
+          {
+            itemLabel: (item) => item.fields.arabic.value,
+            label: "Dzikir",
+          },
+        ),
+      },
+    }),
   },
 });

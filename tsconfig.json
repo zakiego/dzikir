@@ -20,7 +20,7 @@
     "jsx": "preserve",
     "incremental": true,
     "noUncheckedIndexedAccess": true,
-    "types": ["vitest/globals"],
+    "types": ["node"],
     "plugins": [
       {
         "name": "next"

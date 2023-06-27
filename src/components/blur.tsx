@@ -1,10 +1,10 @@
 import { FC } from "react";
 
 interface Props {
-  warna: string;
+  color: string;
 }
 
-export const Blur: FC<Props> = ({ warna }) => {
+export const BackgroundBlur: FC<Props> = ({ color }) => {
   return (
     <div className="fixed">
       <svg
@@ -18,7 +18,7 @@ export const Blur: FC<Props> = ({ warna }) => {
         <g filter="url(#filter0_f)">
           <path
             d="M426 240.77C426 307.891 382.938 362.304 329.818 362.304C276.698 362.304 150 405.526 150 338.404C150 271.283 310.796 150 363.916 150C417.036 150 426 173.648 426 240.77Z"
-            fill={warna}
+            fill={color}
           />
         </g>
         <defs>
@@ -53,7 +53,7 @@ export const Blur: FC<Props> = ({ warna }) => {
         <g filter="url(#filter0_f)">
           <path
             d="M136.389 68C136.389 206.347 -38.8358 301.5 -123.612 301.5C-208.387 301.5 -170.611 206.347 -170.611 68C-170.611 -70.3473 51.6128 -158 136.389 -158C221.164 -158 136.389 -70.3473 136.389 68Z"
-            fill={warna}
+            fill={color}
           />
         </g>
         <defs>

@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Blur } from "~/src/components/blur";
+import { BackgroundBlur } from "~/src/components/blur";
 import { Footer } from "~/src/components/footer";
 import { Header } from "~/src/components/header";
 import { Navbar } from "~/src/components/navbar";
@@ -7,7 +7,7 @@ import { Navbar } from "~/src/components/navbar";
 interface Props {
   title: string;
   children: React.ReactNode;
-  warnaBlur?: string;
+  backgroundBlurColor?: string;
   gradient: {
     from: string;
     to: string;
@@ -17,7 +17,7 @@ interface Props {
 export const PageLayout: FC<Props> = ({
   title,
   children,
-  warnaBlur,
+  backgroundBlurColor,
   gradient,
 }) => {
   return (
@@ -26,13 +26,11 @@ export const PageLayout: FC<Props> = ({
     >
       <Header title={title} />
       <div className="relative ">
-        {warnaBlur && <Blur warnaBlur={warnaBlur} />}
+        {backgroundBlurColor && <BackgroundBlur color={backgroundBlurColor} />}
         <div className="min-h-screen max-w-6xl mx-auto">
           <main className="relative pt-12 pb-10 px-5">
             <Navbar title={title} />
-            <div name="card section" className="pt-14 space-y-8">
-              {children}
-            </div>
+            <div className="pt-14 space-y-8">{children}</div>
             <Footer />
           </main>
         </div>
