@@ -1,4 +1,4 @@
-# Dzikir
+# Dzikir Pagi dan sore
 
 ## Getting Started
 
@@ -12,13 +12,13 @@ Then, install dependencies and fetch data to your local machine:
 
 ```bash
 cd dzikir
-yarn install
+pnpm install
 ```
 
 Finally, run the development server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -26,7 +26,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## API
 
 ```bash
-https://api-zakiego.vercel.app/api/dzikir/v1/getDzikir
+https://dzikir.vercel.app/api/v0/dzikir-pagi
+
+https://dzikir.vercel.app/api/v0/dzikir-sore
+```
+
 ```
 
 ### Learn More
@@ -37,3 +41,4 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```

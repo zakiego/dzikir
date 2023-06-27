@@ -1,0 +1,13 @@
+{
+  "title": "API",
+  "api": [
+    {
+      "label": "Dzikir Pagi",
+      "url": "https://dzikir.zakiego.com/api/v0/dzikir-pagi"
+    },
+    {
+      "label": "Dzikir Sore",
+      "url": "https://dzikir.zakiego.com/api/v0/dzikir-sore"
+    }
+  ]
+}
