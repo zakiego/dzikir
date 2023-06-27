@@ -7,9 +7,12 @@
 		"lint": "next lint"
 	},
 	"dependencies": {
+		"@keystatic/core": "^0.0.107",
+		"@keystatic/next": "^0.0.11",
 		"next": "^13.4.7",
 		"react": "^18.2.0",
-		"react-dom": "^18.2.0"
+		"react-dom": "^18.2.0",
+		"zod": "^3.21.4"
 	},
 	"devDependencies": {
 		"@types/node": "20.3.2",
