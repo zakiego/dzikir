@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FC, useState } from "react";
+import { BsFillGearFill } from "react-icons/bs";
 
 interface NavbarProps {
   title: string;
@@ -18,6 +19,11 @@ export const Navbar: FC<NavbarProps> = ({ title }) => {
       icon: <NightIcon />,
       title: "Dzikir Sore",
       link: "/dzikir-sore",
+    },
+    {
+      icon: <BsFillGearFill className="h-5 w-5" />,
+      title: "API",
+      link: "/list-api",
     },
     {
       icon: <AboutIcon />,
@@ -58,7 +64,7 @@ export const Navbar: FC<NavbarProps> = ({ title }) => {
         <div
           className={`${
             isOpenMenu ? "absolute -mb-7 right-0 top-12 z-10 " : "hidden"
-          } mt-2 flex justify-end transition-all`}
+          } mt-2 flex justify-end transition-all shadow-zinc-500/20 shadow-md rounded-md`}
         >
           <div className=" flex flex-col justify-center bg-white max-w-max px-2 py-2 rounded-xl text-black/75 space-y-2 text-right">
             {listMenu.map((item, index) => (

@@ -23,6 +23,7 @@
     "eslint": "^8.43.0",
     "eslint-config-next": "^13.4.7",
     "postcss": "^8.4.24",
+    "react-icons": "^4.10.1",
     "tailwindcss": "^3.3.2",
     "ts-node": "^10.9.1",
     "tsx": "^3.12.7",

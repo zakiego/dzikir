@@ -55,5 +55,24 @@ export const keystaticConfig = config({
       format: "json",
       schema: dzikirSchema,
     }),
+    api: singleton({
+      label: "API",
+      path: "public/content/api",
+      format: "json",
+      schema: {
+        title: fields.text({ label: "Title" }),
+        description: fields.text({ label: "Description" }),
+        api: fields.array(
+          fields.object({
+            label: fields.text({ label: "Label" }),
+            url: fields.url({ label: "URL", validation: { isRequired: true } }),
+          }),
+          {
+            itemLabel: (item) => item.fields.url.value as string,
+            label: "API",
+          },
+        ),
+      },
+    }),
   },
 });
